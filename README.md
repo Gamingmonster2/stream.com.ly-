@@ -18,7 +18,7 @@
 
 | المشروع | الحالة | الرابط |
 | --- | --- | --- |
-| **Cyber Michelangelo** — HD-2D shmup + وضع 3D اختياري | 🟢 مباشر | <https://ly.id.ly/Cyber-Michelangelo/> |
+| **Cyber Michelangelo** — HD-2D shmup + وضع 3D اختياري | 🟢 مباشر | <https://cyber.stream.com.ly/> |
 | **لعبة السيارات** — مشروع سباقات قادم | 🔒 قريباً | — |
 | **لعبة الدراجات النارية** — مشروع قادم | 🔒 قريباً | — |
 
