@@ -1,0 +1,7 @@
+# STREAM redirects (Cloudflare Pages)
+# Short links for the live project and platform metadata.
+
+/play    https://ly.id.ly/Cyber-Michelangelo/    302
+/cyber   https://ly.id.ly/Cyber-Michelangelo/    302
+/game    /#featured                              302
+/github  https://github.com/Gamingmonster2/stream.com.ly-  302

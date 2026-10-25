@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STREAM · منصة الألعاب والتجارب الرقمية | stream.com.ly</title>
+  <meta name="description" content="STREAM هي منصة ألعاب وتجارب رقمية: ألعاب ويب أصلية، أدوات وبرمجيات، ومشاريع قادمة. أول مشروع مباشر: Cyber Michelangelo — لعبة إطلاق نار عمودية بأسلوب HD-2D مع وضع 3D اختياري.">
+  <meta name="keywords" content="STREAM, stream.com.ly, ألعاب ويب, ألعاب ليبيا, Cyber Michelangelo, سايبر مايكل أنجلو, indie games, browser games, منصة ألعاب">
+  <meta name="author" content="STREAM">
+  <meta name="theme-color" content="#050914">
+  <link rel="canonical" href="https://stream.com.ly/">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="STREAM">
+  <meta property="og:title" content="STREAM — منصة الألعاب والتجارب الرقمية">
+  <meta property="og:description" content="تيّار واحد... عوالم لا تنتهي. أول مشروع مباشر: Cyber Michelangelo — HD-2D مع وضع 3D اختياري.">
+  <meta property="og:url" content="https://stream.com.ly/">
+  <meta property="og:image" content="https://stream.com.ly/assets/img/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="STREAM — games &amp; digital experiences, featuring Cyber Michelangelo">
+  <meta property="og:locale" content="ar_LY">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="STREAM — Games & Digital Experiences">
+  <meta name="twitter:description" content="One current, endless worlds. Featuring Cyber Michelangelo — an HD-2D shmup with an optional 3D mode.">
+  <meta name="twitter:image" content="https://stream.com.ly/assets/img/og.png">
+
+  <!-- Favicon (procedural, no asset needed) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2322e4c5'/%3E%3Cstop offset='1' stop-color='%238b5cf6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='%23050914'/%3E%3Cpath d='M12 38c6-10 10 2 16-8s10 2 16-8' fill='none' stroke='url(%23g)' stroke-width='5' stroke-linecap='round'/%3E%3Cpath d='M12 48c6-10 10 2 16-8s10 2 16-8' fill='none' stroke='url(%23g)' stroke-width='3' stroke-linecap='round' opacity='.55'/%3E%3C/svg%3E">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Orbitron:wght@500;700;900&family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Structured data: platform + games -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "STREAM",
+    "url": "https://stream.com.ly/",
+    "inLanguage": ["ar", "en"],
+    "description": "منصة ألعاب وتجارب رقمية: ألعاب ويب أصلية، أدوات وبرمجيات، ومشاريع قادمة.",
+    "publisher": { "@type": "Organization", "name": "STREAM", "url": "https://stream.com.ly/" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "STREAM projects",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "VideoGame",
+          "name": "Cyber Michelangelo",
+          "alternateName": "سايبر مايكل أنجلو",
+          "url": "https://ly.id.ly/Cyber-Michelangelo/",
+          "image": "https://stream.com.ly/assets/img/cyber-featured.png",
+          "genre": ["Shoot 'em up", "Arcade"],
+          "gamePlatform": ["Web browser"],
+          "applicationCategory": "Game",
+          "operatingSystem": "Web",
+          "inLanguage": ["ar", "en"],
+          "description": "لعبة إطلاق نار عمودية بأسلوب HD-2D مستوحاة من Terra Cresta، مع وضع 3D اختياري وخلفية صوتية من طبيعة الفضاء."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- Animated background canvas -->
+  <canvas id="fx" aria-hidden="true"></canvas>
+  <div class="bg-aurora" aria-hidden="true"></div>
+  <div class="bg-grid" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="./" aria-label="STREAM home">
+        <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
+          <defs>
+            <linearGradient id="brandGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#22e4c5"/>
+              <stop offset="1" stop-color="#8b5cf6"/>
+            </linearGradient>
+          </defs>
+          <path d="M10 36c7-12 12 3 19-10s12 3 20-10" fill="none" stroke="url(#brandGrad)" stroke-width="6" stroke-linecap="round"/>
+          <path d="M10 48c7-12 12 3 19-10s12 3 20-10" fill="none" stroke="url(#brandGrad)" stroke-width="4" stroke-linecap="round" opacity=".5"/>
+        </svg>
+        <span class="brand-text">STREAM<span class="brand-dot">.</span></span>
+      </a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#games" data-en="Games" data-ar="الألعاب">الألعاب</a>
+        <a href="#apps" data-en="Platform" data-ar="المنصة">المنصة</a>
+        <a href="#about" data-en="Vision" data-ar="الرؤية">الرؤية</a>
+      </nav>
+
+      <div class="header-actions">
+        <button id="lang-toggle" class="lang-btn" type="button" aria-label="Switch language" data-en="العربية" data-ar="English">English</button>
+        <a class="btn btn-primary btn-sm" href="https://ly.id.ly/Cyber-Michelangelo/" target="_blank" rel="noopener">
+          <span data-en="Play now" data-ar="العب الآن">العب الآن</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- 1. HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">
+            <span class="pulse-dot" aria-hidden="true"></span>
+            <span data-en="A NEW GAMES &amp; EXPERIENCES PLATFORM" data-ar="منصة جديدة للألعاب والتجارب الرقمية">منصة جديدة للألعاب والتجارب الرقمية</span>
+          </span>
+
+          <h1>
+            <span data-en="Welcome to" data-ar="مرحباً بك في">مرحباً بك في</span>
+            <span class="grad-text">STREAM</span>
+            <span class="hero-line" data-en="One current. Endless worlds." data-ar="تيّار واحد... عوالم لا تنتهي.">تيّار واحد... عوالم لا تنتهي.</span>
+          </h1>
+
+          <p class="hero-desc" data-en="Original browser games, web tools and experimental software — built with care, shipped from Libya to the world." data-ar="ألعاب ويب أصلية، أدوات وبرمجيات، وتجارب رقمية — نصنعها بعناية ونطلقها من ليبيا إلى العالم.">
+            ألعاب ويب أصلية، أدوات وبرمجيات، وتجارب رقمية — نصنعها بعناية ونطلقها من ليبيا إلى العالم.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#games">
+              <span data-en="Explore projects" data-ar="استكشف المشاريع">استكشف المشاريع</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
+            </a>
+            <a class="btn btn-ghost" href="https://ly.id.ly/Cyber-Michelangelo/" target="_blank" rel="noopener">
+              <span data-en="Try Cyber Michelangelo" data-ar="جرّب سايبر مايكل أنجلو">جرّب سايبر مايكل أنجلو</span>
+            </a>
+          </div>
+
+          <dl class="hero-stats">
+            <div><dt data-en="Live" data-ar="مباشر">مباشر</dt><dd>1</dd></div>
+            <div><dt data-en="Projects" data-ar="مشاريع">مشاريع</dt><dd>3</dd></div>
+            <div><dt data-en="Platform" data-ar="المنصة">المنصة</dt><dd>2026</dd></div>
+          </dl>
+        </div>
+
+        <div class="hero-visual">
+          <div class="portal-frame">
+            <div class="portal-glow" aria-hidden="true"></div>
+            <div class="portal-screen">
+              <img src="assets/img/cyber-title.png" alt="شاشة عنوان Cyber Michelangelo" width="540" height="940" loading="eager">
+              <span class="status-pill live"><span class="pulse-dot" aria-hidden="true"></span><span data-en="LIVE NOW" data-ar="متاحة الآن">متاحة الآن</span></span>
+            </div>
+            <div class="float-chip chip-1">HD-2D</div>
+            <div class="float-chip chip-2" data-en="Optional 3D" data-ar="وضع 3D اختياري">وضع 3D اختياري</div>
+            <div class="float-chip chip-3" data-en="Space nature" data-ar="طبيعة فضائية">طبيعة فضائية</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. FEATURED PROJECT -->
+    <section class="section" id="featured">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-kicker" data-en="FEATURED PROJECT" data-ar="المشروع المميز">المشروع المميز</span>
+          <h2 data-en="The first current in the stream" data-ar="أول تيّار في المنصة">أول تيّار في المنصة</h2>
+          <p data-en="A digital-Renaissance vertical shmup built around modular ships, risk-reward transformations and a world that breathes." data-ar="لعبة إطلاق نار عمودية بروح النهضة الرقمية: سفينة قابلة للتجميع، تحولات محفوفة بالمخاطر، وعالم يتنفّس معك.">لعبة إطلاق نار عمودية بروح النهضة الرقمية: سفينة قابلة للتجميع، تحولات محفوفة بالمخاطر، وعالم يتنفّس معك.</p>
+        </div>
+
+        <article class="featured-card">
+          <div class="featured-media">
+            <img src="assets/img/cyber-featured.png" alt="Cyber Michelangelo — لقطة من المعركة مع الزعيم" width="540" height="940" loading="lazy">
+            <div class="featured-media-fade" aria-hidden="true"></div>
+            <span class="status-pill live feature-status"><span class="pulse-dot" aria-hidden="true"></span><span data-en="LIVE" data-ar="مباشر">مباشر</span></span>
+          </div>
+
+          <div class="featured-body">
+            <div class="featured-title-row">
+              <h3>Cyber Michelangelo <span class="ar-inline" lang="ar">سايبر مايكل أنجلو</span></h3>
+            </div>
+            <p class="featured-lead" data-en="Dock four modules onto your Alpha craft, split into invulnerable formations, or burn everything as the Phoenix. Every stage loops forever — and so does the danger." data-ar="التحم بأربع وحدات على سفينتك ألفا، انفصل في تشكيلات منيعة، أو أحرق كل شيء كطائر العنقاء. كل مرحلة تتكرر إلى الأبد — وكذلك الخطر.">
+              التحم بأربع وحدات على سفينتك ألفا، انفصل في تشكيلات منيعة، أو أحرق كل شيء كطائر العنقاء. كل مرحلة تتكرر إلى الأبد — وكذلك الخطر.
+            </p>
+
+            <ul class="feature-list">
+              <li><span class="feature-dot"></span><span data-en="Device-resolution HD-2D art" data-ar="رسم HD-2D بدقة الجهاز">رسم HD-2D بدقة الجهاز</span></li>
+              <li><span class="feature-dot"></span><span data-en="Optional real-time 3D mode" data-ar="وضع 3D اختياري في الزمن الحقيقي">وضع 3D اختياري في الزمن الحقيقي</span></li>
+              <li><span class="feature-dot"></span><span data-en="Living space-nature soundscape" data-ar="خلفية صوتية من طبيعة الفضاء">خلفية صوتية من طبيعة الفضاء</span></li>
+              <li><span class="feature-dot"></span><span data-en="Keyboard, gamepad &amp; touch" data-ar="لوحة مفاتيح، يد تحكم، ولمس">لوحة مفاتيح، يد تحكم، ولمس</span></li>
+            </ul>
+
+            <div class="featured-actions">
+              <a class="btn btn-primary" href="https://ly.id.ly/Cyber-Michelangelo/" target="_blank" rel="noopener">
+                <span data-en="Play Cyber Michelangelo" data-ar="العب سايبر مايكل أنجلو">العب سايبر مايكل أنجلو</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+              <a class="btn btn-ghost" href="https://github.com/Gamingmonster2/Cyber-Michelangelo" target="_blank" rel="noopener">
+                <span data-en="Source code" data-ar="الشيفرة المصدرية">الشيفرة المصدرية</span>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 3. GAMES GRID -->
+    <section class="section" id="games">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-kicker" data-en="PROJECTS" data-ar="المشاريع">المشاريع</span>
+          <h2 data-en="Games &amp; experiences" data-ar="الألعاب والتجارب">الألعاب والتجارب</h2>
+          <p data-en="One live, more on the way. Each project gets its own current — and its own release." data-ar="واحد مباشر الآن، والمزيد في الطريق. كل مشروع له تيّاره وإصداره الخاص.">واحد مباشر الآن، والمزيد في الطريق. كل مشروع له تيّاره وإصداره الخاص.</p>
+        </div>
+
+        <div class="project-grid">
+          <!-- LIVE: Cyber Michelangelo -->
+          <a class="project-card project-live" href="https://ly.id.ly/Cyber-Michelangelo/" target="_blank" rel="noopener">
+            <div class="project-thumb">
+              <img src="assets/img/cyber-card.png" alt="Cyber Michelangelo gameplay" loading="lazy" width="540" height="940">
+              <span class="status-pill live"><span class="pulse-dot" aria-hidden="true"></span><span data-en="LIVE" data-ar="مباشر">مباشر</span></span>
+              <div class="thumb-cta">
+                <span data-en="Play now" data-ar="العب الآن">العب الآن</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-heading">
+                <h3>Cyber Michelangelo</h3>
+                <span class="project-badge">HD-2D · 3D</span>
+              </div>
+              <p data-en="Modular shmup · Phoenix transformation · endless stages" data-ar="إطلاق عمودي بوحدات · تحوّل العنقاء · مراحل لا نهائية">إطلاق عمودي بوحدات · تحوّل العنقاء · مراحل لا نهائية</p>
+              <div class="project-tags">
+                <span data-en="Shoot 'em up" data-ar="إطلاق نار">إطلاق نار</span>
+                <span data-en="Arcade" data-ar="أركيد">أركيد</span>
+                <span data-en="Web" data-ar="ويب">ويب</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- SOON: Car game -->
+          <article class="project-card project-locked" data-locked="true" tabindex="0" role="button" aria-disabled="true" aria-label="لعبة السيارات — قريباً">
+            <div class="project-thumb art-car">
+              <svg class="locked-art" viewBox="0 0 400 400" aria-hidden="true">
+                <defs>
+                  <linearGradient id="carSky" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#0b2a3a"/><stop offset="1" stop-color="#071018"/>
+                  </linearGradient>
+                  <linearGradient id="carNeon" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0" stop-color="#22e4c5"/><stop offset="1" stop-color="#f5c451"/>
+                  </linearGradient>
+                </defs>
+                <rect width="400" height="400" fill="url(#carSky)"/>
+                <g fill="#0f3443" opacity=".85">
+                  <rect x="20" y="170" width="36" height="110"/><rect x="66" y="140" width="28" height="140"/>
+                  <rect x="104" y="185" width="44" height="95"/><rect x="158" y="120" width="26" height="160"/>
+                  <rect x="200" y="165" width="40" height="115"/><rect x="252" y="145" width="30" height="135"/>
+                  <rect x="292" y="190" width="46" height="90"/><rect x="346" y="155" width="34" height="125"/>
+                </g>
+                <g fill="#22e4c5" opacity=".18">
+                  <rect x="30" y="200" width="4" height="4"/><rect x="72" y="180" width="4" height="4"/>
+                  <rect x="112" y="215" width="4" height="4"/><rect x="164" y="155" width="4" height="4"/>
+                  <rect x="208" y="195" width="4" height="4"/><rect x="260" y="175" width="4" height="4"/>
+                </g>
+                <path d="M0 300 L70 280 L140 292 L210 276 L290 292 L360 278 L400 288" fill="none" stroke="#8b5cf6" stroke-width="2" opacity=".55"/>
+                <g transform="translate(88 250)">
+                  <path d="M0 48 L16 20 L54 10 L120 8 L162 20 L186 36 L222 40 L232 60 L220 74 L16 74 L4 62 Z" fill="#0a111a" stroke="url(#carNeon)" stroke-width="2.5"/>
+                  <circle cx="54" cy="76" r="16" fill="#050914" stroke="#22e4c5" stroke-width="2.5"/>
+                  <circle cx="176" cy="76" r="16" fill="#050914" stroke="#f5c451" stroke-width="2.5"/>
+                  <path d="M36 30 L70 20 L118 18" stroke="#22e4c5" stroke-width="2" opacity=".7"/>
+                  <path d="M128 18 L166 26" stroke="#f5c451" stroke-width="2" opacity=".7"/>
+                </g>
+              </svg>
+              <span class="status-pill soon"><span data-en="SOON" data-ar="قريباً">قريباً</span></span>
+              <div class="lock-overlay"><span class="lock-icon" aria-hidden="true">🔒</span><span data-en="Locked · in development" data-ar="مقفلة · قيد التطوير">مقفلة · قيد التطوير</span></div>
+            </div>
+            <div class="project-body">
+              <div class="project-heading"><h3 data-en="Car Game" data-ar="لعبة السيارات">لعبة السيارات</h3><span class="project-badge soon-badge" data-en="SOON" data-ar="قريباً">قريباً</span></div>
+              <p data-en="A neon road experiment — speed, drift and asphalt. Coming to a new current." data-ar="تجربة على طريق نيوني — سرعة وانزلاق وأسفلت. قادمة في تيّار جديد.">تجربة على طريق نيوني — سرعة وانزلاق وأسفلت. قادمة في تيّار جديد.</p>
+              <div class="project-tags"><span data-en="Racing" data-ar="سباقات">سباقات</span><span data-en="Arcade" data-ar="أركيد">أركيد</span></div>
+            </div>
+          </article>
+
+          <!-- SOON: Motorcycle game -->
+          <article class="project-card project-locked" data-locked="true" tabindex="0" role="button" aria-disabled="true" aria-label="لعبة الدراجات النارية — قريباً">
+            <div class="project-thumb art-moto">
+              <svg class="locked-art" viewBox="0 0 400 400" aria-hidden="true">
+                <defs>
+                  <linearGradient id="motoSky" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#241033"/><stop offset="1" stop-color="#0a0614"/>
+                  </linearGradient>
+                  <linearGradient id="motoNeon" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#8b5cf6"/><stop offset="1" stop-color="#22e4c5"/>
+                  </linearGradient>
+                </defs>
+                <rect width="400" height="400" fill="url(#motoSky)"/>
+                <path d="M0 292 C120 252 280 252 400 292" fill="none" stroke="#8b5cf6" stroke-width="2" opacity=".45"/>
+                <path d="M0 322 C120 288 280 288 400 322" fill="none" stroke="#22e4c5" stroke-width="1.5" opacity=".3"/>
+                <g transform="translate(70 180)">
+                  <circle cx="52" cy="88" r="38" fill="none" stroke="#22e4c5" stroke-width="3"/>
+                  <circle cx="52" cy="88" r="14" fill="none" stroke="#22e4c5" stroke-width="2" opacity=".6"/>
+                  <circle cx="232" cy="88" r="38" fill="none" stroke="#8b5cf6" stroke-width="3"/>
+                  <circle cx="232" cy="88" r="14" fill="none" stroke="#8b5cf6" stroke-width="2" opacity=".6"/>
+                  <path d="M52 88 L118 42 L176 42 L214 88" fill="none" stroke="#e8f4ff" stroke-width="3" opacity=".8"/>
+                  <path d="M118 42 L96 88" stroke="#e8f4ff" stroke-width="3" opacity=".6"/>
+                  <path d="M176 42 L206 20 L228 30" stroke="#f5c451" stroke-width="3" opacity=".8"/>
+                  <path d="M118 42 L156 30 L176 42" fill="#0a111a" stroke="url(#motoNeon)" stroke-width="2.5"/>
+                  <circle cx="144" cy="22" r="9" fill="#0a111a" stroke="#22e4c5" stroke-width="2"/>
+                </g>
+                <g fill="#f5c451" opacity=".5"><circle cx="60" cy="120" r="2"/><circle cx="100" cy="90" r="1.6"/><circle cx="340" cy="100" r="2"/><circle cx="310" cy="140" r="1.6"/></g>
+              </svg>
+              <span class="status-pill soon"><span data-en="SOON" data-ar="قريباً">قريباً</span></span>
+              <div class="lock-overlay"><span class="lock-icon" aria-hidden="true">🔒</span><span data-en="Locked · in development" data-ar="مقفلة · قيد التطوير">مقفلة · قيد التطوير</span></div>
+            </div>
+            <div class="project-body">
+              <div class="project-heading"><h3 data-en="Motorcycle Game" data-ar="لعبة الدراجات النارية">لعبة الدراجات النارية</h3><span class="project-badge soon-badge" data-en="SOON" data-ar="قريباً">قريباً</span></div>
+              <p data-en="Two wheels, neon speed and the edge of control. A new current is warming up." data-ar="عجلتان وسرعة نيونية وحدود السيطرة. تيّار جديد قيد التسخين.">عجلتان وسرعة نيونية وحدود السيطرة. تيّار جديد قيد التسخين.</p>
+              <div class="project-tags"><span data-en="Racing" data-ar="سباقات">سباقات</span><span data-en="Arcade" data-ar="أركيد">أركيد</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. PLATFORM / APPS -->
+    <section class="section" id="apps">
+      <div class="container">
+        <div class="platform-panel">
+          <div class="platform-copy">
+            <span class="section-kicker" data-en="BEYOND GAMES" data-ar="أبعد من الألعاب">أبعد من الألعاب</span>
+            <h2 data-en="A platform, not just a game page" data-ar="منصة، لا صفحة لعبة فقط">منصة، لا صفحة لعبة فقط</h2>
+            <p data-en="STREAM is being built as a home for games, web tools and small experimental software. Each project gets its own release lane and a clear status — no clutter, no dead links." data-ar="نبني STREAM كبيت للألعاب وأدوات الويب والبرمجيات التجريبية الصغيرة. كل مشروع له مساره وإصداره وحالة واضحة — بلا فوضى ولا روابط ميتة.">نبني STREAM كبيت للألعاب وأدوات الويب والبرمجيات التجريبية الصغيرة. كل مشروع له مساره وإصداره وحالة واضحة — بلا فوضى ولا روابط ميتة.</p>
+            <div class="platform-chips">
+              <span class="glass-chip"><span data-en="Web tools" data-ar="أدوات ويب">أدوات ويب</span><span class="chip-soon" data-en="soon" data-ar="قريباً">قريباً</span></span>
+              <span class="glass-chip"><span data-en="Mini apps" data-ar="تطبيقات صغيرة">تطبيقات صغيرة</span><span class="chip-soon" data-en="soon" data-ar="قريباً">قريباً</span></span>
+              <span class="glass-chip"><span data-en="Labs &amp; experiments" data-ar="مختبرات وتجارب">مختبرات وتجارب</span><span class="chip-soon" data-en="soon" data-ar="قريباً">قريباً</span></span>
+            </div>
+          </div>
+          <div class="platform-diagram" aria-hidden="true">
+            <div class="node node-live"><span class="node-dot live"></span><span data-en="LIVE" data-ar="مباشر">مباشر</span><strong>Cyber Michelangelo</strong></div>
+            <div class="node"><span class="node-dot soon"></span><span data-en="SOON" data-ar="قريباً">قريباً</span><strong data-en="Car game" data-ar="لعبة السيارات">لعبة السيارات</strong></div>
+            <div class="node"><span class="node-dot soon"></span><span data-en="SOON" data-ar="قريباً">قريباً</span><strong data-en="Motorcycle game" data-ar="لعبة الدراجات">لعبة الدراجات</strong></div>
+            <div class="node node-more"><span class="node-dot future"></span><span data-en="NEXT" data-ar="التالي">التالي</span><strong data-en="Tools &amp; apps" data-ar="أدوات وتطبيقات">أدوات وتطبيقات</strong></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. ABOUT / VISION -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-kicker" data-en="THE VISION" data-ar="الرؤية">الرؤية</span>
+          <h2 data-en="Small, sharp, and built to last" data-ar="قليل، مركّز، ومبني ليبقى">قليل، مركّز، ومبني ليبقى</h2>
+          <p data-en="No app-store gatekeeping, no installs. Projects ship as fast, focused web experiences you can open from any browser — and each one is built to stand on its own." data-ar="لا متاجر تطبيقات ولا تثبيت. المشاريع تُطلق كتجارب ويب سريعة ومركّزة تُفتح من أي متصفح — وكل مشروع مصمم ليقف بذاته.">لا متاجر تطبيقات ولا تثبيت. المشاريع تُطلق كتجارب ويب سريعة ومركّزة تُفتح من أي متصفح — وكل مشروع مصمم ليقف بذاته.</p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item done">
+            <span class="timeline-year">v1</span>
+            <h3 data-en="The platform is born" data-ar="ولادة المنصة">ولادة المنصة</h3>
+            <p data-en="The stream.com.ly portal launches with its first live project and a clear lane for what's next." data-ar="إطلاق بوابة stream.com.ly مع أول مشروع مباشر ومسار واضح لما هو قادم.">إطلاق بوابة stream.com.ly مع أول مشروع مباشر ومسار واضح لما هو قادم.</p>
+          </div>
+          <div class="timeline-item current">
+            <span class="timeline-year">v2</span>
+            <h3 data-en="Two wheels, four wheels" data-ar="عجلتان وأربع عجلات">عجلتان وأربع عجلات</h3>
+            <p data-en="Car and motorcycle arcade projects are in development — locked cards become playable links." data-ar="مشروعا السيارات والدراجات النارية قيد التطوير — البطاقات المقفلة تتحول إلى روابط لعب.">مشروعا السيارات والدراجات النارية قيد التطوير — البطاقات المقفلة تتحول إلى روابط لعب.</p>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-year">v3</span>
+            <h3 data-en="Beyond games" data-ar="أبعد من الألعاب">أبعد من الألعاب</h3>
+            <p data-en="Web tools, utilities and experiments join the platform — a small ecosystem, not a catalog dump." data-ar="أدوات ويب ومختبرات وتجارب تنضم إلى المنصة — منظومة صغيرة، ليست كتالوجاً مزدحماً.">أدوات ويب ومختبرات وتجارب تنضم إلى المنصة — منظومة صغيرة، ليست كتالوجاً مزدحماً.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. CTA -->
+    <section class="section cta-section">
+      <div class="container">
+        <div class="cta-card">
+          <div>
+            <h2 data-en="Ready to enter the current?" data-ar="جاهز لتدخل التيار؟">جاهز لتدخل التيار؟</h2>
+            <p data-en="Cyber Michelangelo is live right now — full HD-2D campaign, optional 3D mode and a space-nature soundscape." data-ar="سايبر مايكل أنجلو متاحة الآن — حملة HD-2D كاملة، وضع 3D اختياري، وخلفية صوتية من طبيعة الفضاء.">سايبر مايكل أنجلو متاحة الآن — حملة HD-2D كاملة، وضع 3D اختياري، وخلفية صوتية من طبيعة الفضاء.</p>
+          </div>
+          <a class="btn btn-primary btn-lg" href="https://ly.id.ly/Cyber-Michelangelo/" target="_blank" rel="noopener">
+            <span data-en="Play now" data-ar="العب الآن">العب الآن</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="brand-text">STREAM<span class="brand-dot">.</span></span>
+        <p data-en="Games & digital experiences. Built with care." data-ar="ألعاب وتجارب رقمية. صُنعت بعناية.">ألعاب وتجارب رقمية. صُنعت بعناية.</p>
+      </div>
+      <div class="footer-links">
+        <div>
+          <h4 data-en="Play" data-ar="العب">العب</h4>
+          <a href="https://ly.id.ly/Cyber-Michelangelo/" target="_blank" rel="noopener">Cyber Michelangelo</a>
+          <a href="#games" data-en="All projects" data-ar="كل المشاريع">كل المشاريع</a>
+        </div>
+        <div>
+          <h4 data-en="Source" data-ar="المصدر">المصدر</h4>
+          <a href="https://github.com/Gamingmonster2/stream.com.ly-" target="_blank" rel="noopener">Platform repo</a>
+          <a href="https://github.com/Gamingmonster2/Cyber-Michelangelo" target="_blank" rel="noopener">Game repo</a>
+        </div>
+        <div>
+          <h4 data-en="Platform" data-ar="المنصة">المنصة</h4>
+          <a href="#about" data-en="Vision" data-ar="الرؤية">الرؤية</a>
+          <a href="#apps" data-en="Roadmap" data-ar="خريطة الطريق">خريطة الطريق</a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© <span id="year">2026</span> STREAM · stream.com.ly</span>
+      <span class="footer-note" data-en="Made with care in Libya." data-ar="صُنع بعناية في ليبيا.">صُنع بعناية في ليبيا.</span>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast" role="status" aria-live="polite">
+    <span class="toast-dot" aria-hidden="true"></span>
+    <span id="toast-text" data-en="This project is still locked — coming soon." data-ar="هذا المشروع مقفل حالياً — قريباً.">هذا المشروع مقفل حالياً — قريباً.</span>
+  </div>
+
+  <script src="assets/js/app.js" defer></script>
+</body>
+</html>
