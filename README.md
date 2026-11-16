@@ -3,7 +3,7 @@
 **منصة ألعاب وتجارب رقمية** — بوابة خفيفة (HTML/CSS/JS فقط، بدون build) تجمع المشاريع المباشرة والقادمة في مكان واحد.
 **A games & digital experiences platform** — a zero-build static portal for live and upcoming projects.
 
-> الحالة: الواجهة الأمامية جاهزة للمراجعة. أول مشروع مباشر: **Cyber Michelangelo**.
+> الحالة: الواجهة الأمامية جاهزة للمراجعة. مشروعان مباشران: **Cyber Michelangelo** و**Neon Snake: Evolution**.
 > الصفحة مصمّمة للاستضافة على **Cloudflare Pages** على النطاق `stream.com.ly`.
 
 ![STREAM desktop preview](assets/img/preview-desktop.png)
@@ -19,6 +19,7 @@
 | المشروع | الحالة | الرابط |
 | --- | --- | --- |
 | **Cyber Michelangelo** — HD-2D shmup + وضع 3D اختياري | 🟢 مباشر | <https://cyber.stream.com.ly/> |
+| **Neon Snake: Evolution** — أفعى النيون: تطوّر (ثعبان نيون PWA) | 🟢 مباشر | <https://snake.stream.com.ly/> |
 | **لعبة السيارات** — مشروع سباقات قادم | 🔒 قريباً | — |
 | **لعبة الدراجات النارية** — مشروع قادم | 🔒 قريباً | — |
 
@@ -33,9 +34,9 @@ index.html               الصفحة الرئيسية (عربي افتراضي 
 assets/
   css/style.css          الهوية البصرية الداكنة + التخطيط المتجاوب + RTL/LTR
   js/app.js              تبديل اللغة، الحركات، الخلفية المتحركة، بطاقات «قريباً»
-  img/                   لقطات Cyber Michelangelo (بطاقة + مشروع مميز + hero)
+  img/                   لقطات المشاريع المباشرة (Cyber Michelangelo + Neon Snake + hero)
 _headers                 أمان + كاش (Cloudflare Pages)
-_redirects               مختصرات /play و/cyber وغيرها (Cloudflare Pages)
+_redirects               مختصرات /play و/cyber و/snake وغيرها (Cloudflare Pages)
 404.html                 صفحة خطأ بهوية المنصة
 robots.txt / sitemap.xml تحسين الظهور في محركات البحث
 CNAME                    احتياطي إن استُخدم GitHub Pages بدلاً من Cloudflare Pages
@@ -83,7 +84,7 @@ node server.mjs          # → http://127.0.0.1:5180
 
 ## خريطة الطريق · Roadmap
 
-- **v1 (الآن):** بوابة stream.com.ly + Cyber Michelangelo مباشرة + بطاقات مقفلة للسيارات والدراجات.
+- **v1 (الآن):** بوابة stream.com.ly + لعبتان مباشرتان (Cyber Michelangelo وNeon Snake: Evolution) + بطاقات مقفلة للسيارات والدراجات.
 - **v2:** إطلاق لعبتي السيارات والدراجات في مسارات/نطاقات فرعية مستقلة.
 - **v3:** أدوات وبرمجيات (أدوات ويب، مختبرات، تطبيقات صغيرة) ضمن نفس المنصة.
 

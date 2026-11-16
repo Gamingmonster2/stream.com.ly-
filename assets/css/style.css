@@ -675,7 +675,7 @@ section[id] { scroll-margin-top: 96px; }
    -------------------------------------------------------------------------- */
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 22px;
 }
 
@@ -746,6 +746,22 @@ section[id] { scroll-margin-top: 96px; }
   opacity: 0;
   transform: translateY(8px);
   transition: all 0.35s var(--ease);
+}
+
+.thumb-new {
+  position: absolute;
+  top: 16px;
+  inset-inline-end: 16px;
+  z-index: 2;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(245, 196, 81, 0.5);
+  background: rgba(8, 14, 26, 0.82);
+  color: var(--gold);
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  backdrop-filter: blur(8px);
 }
 
 .project-live:hover .thumb-cta,
@@ -1020,6 +1036,7 @@ section[id] { scroll-margin-top: 96px; }
 
 .cta-card h2 { font-size: clamp(1.5rem, 2.8vw, 2.1rem); font-weight: 900; margin-bottom: 8px; }
 .cta-card p { color: var(--text-dim); max-width: 40rem; }
+.cta-actions { display: flex; flex-wrap: wrap; gap: 12px; }
 
 /* --------------------------------------------------------------------------
    Footer
